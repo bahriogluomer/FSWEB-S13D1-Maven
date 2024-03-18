@@ -6,10 +6,12 @@ public class Main {
     }
 
     public static boolean shouldWakeUp(boolean isBarking, int clock) {
-        if (isBarking && clock>=8 && clock<=20) {
+        if (isBarking && (clock >=0 && clock<8)) {
             return true;
-
-        }else if (!isBarking) {
+        }else if (isBarking && clock >=20 && clock<=23) {
+            return true;
+        }
+        else if (!isBarking) {
         return false;
         }
         return false;
